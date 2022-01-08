@@ -291,7 +291,7 @@ select option { color: black;}
     cursor: pointer;
 }
 .step-opt:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.5);
 }
 .goog-te-combo {
     all: unset;
@@ -304,4 +304,22 @@ select option { color: black;}
 }
 #google_translate_element{
     margin-bottom: 40px;
+}
+.left-section .home-nav {
+    text-decoration: none;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    background: rgb(0, 0, 85);
+    cursor: pointer;
+}
+.left-section .home-nav:hover {
+    filter: brightness(1.5);
+}
+.left-section .home-nav:visited {
+    color: unset;
 }
