@@ -201,6 +201,27 @@ strong{
     position: relative;
 }
 
+#Instruction9{
+    display: none;
+    width: 19.4vw;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1%;
+    padding-bottom: 24%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 5%;
+    height: 58vh;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 44.7vh;
+    background: transparent;
+}
+
 #Instruction9_contacts1{
     display: none;
     width: 19.4vw;
@@ -1456,4 +1477,78 @@ hr{
     height: 10px;
     width: 10px;
 }
-  
+
+#congcontai{
+    background-color: white;
+    width: 100%;
+    height: 100.5% !important;
+    display: none;
+}
+
+#greet{
+    margin-left: 23.4%;
+    width: 76.6%;
+    height: 162%;
+}
+
+#links{
+    margin-left: 23.4%;
+    margin-top: -1%;
+    margin-bottom: 5%;
+    font-size: 172%;
+}
+
+#homebtn{
+    border-radius: 10%;
+    margin-left: 50%;
+    background-color: black !important;
+    padding: 1%;
+    font-size: 159%;
+    text-decoration: none;
+}
+
+.instructions{
+    float: right;
+    margin-right: -177%;
+    margin-top: -103%;
+}
+
+.inst5{
+    float: right;
+    margin-top: -225%;
+    margin-right: -204%;
+    width: 107%;
+}
+
+#img7{
+    width: -webkit-fill-available;
+    margin-top: 12%;
+}
+
+#img10{
+    margin-top: -97%;
+    width: 80%;
+}
+
+#img13{
+    margin-top: 25%;
+    width: 81%;
+}
+
+#img16{
+    float: right;
+    position: relative;
+    margin-top: -232%;
+    width: 98%;
+    margin-right: -157%;
+}
+
+#endtxt{
+    float: right;
+    position: relative;
+    margin-top: -239%;
+    width: 98%;
+    margin-right: -157%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}

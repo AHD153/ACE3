@@ -11,42 +11,42 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-                 <script>
-          var StopWebCam = function () {
-               var stream = video.srcObject;
-               var tracks = stream.getTracks();
+    <script>
+        var StopWebCam = function () {
+            var stream = video.srcObject;
+            var tracks = stream.getTracks();
 
-               for (var i = 0; i < tracks.length; i++) {
-                    var track = tracks[i];
-                    track.stop();
-               }
-               video.srcObject = null;
-          }
+            for (var i = 0; i < tracks.length; i++) {
+                var track = tracks[i];
+                track.stop();
+            }
+            video.srcObject = null;
+        }
 
-          var start = function () {
-               var video = document.getElementById("video"),
-                    vendorURL = window.URL || window.webkitURL;
+        var start = function () {
+            var video = document.getElementById("video"),
+                vendorURL = window.URL || window.webkitURL;
 
-               if (navigator.mediaDevices.getUserMedia) {
-                    navigator.mediaDevices.getUserMedia({ video: true })
-                         .then(function (stream) {
-                              video.srcObject = stream;
-                         }).catch(function (error) {
-                              console.log("Something went wrong");
-                         });
-               }
-          };
-          $(function () { start(); });
+            if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function (stream) {
+                        video.srcObject = stream;
+                    }).catch(function (error) {
+                        console.log("Something went wrong");
+                    });
+            }
+        };
+        $(function () { start(); });
 
-          function googleTranslateElementInit() {
-              window.innerWidth;
-              window.innerHeight;
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-     </script>
+        function googleTranslateElementInit() {
+            window.innerWidth;
+            window.innerHeight;
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
 </head>
 
-<body >
+<body>
 
     <div id="google_translate_element">
         <h4 class="language_text">Select a language</h4>
@@ -64,8 +64,15 @@
             <p>By continuing, you agree to the <a href="#">Terms of Service</a> and acknowledge the <a href="#">Privacy
                     Policy</a>. <a href="#">Learn more</a></p>
             <button onclick="Display('Instruction0','Instruction1')" id="btngive0" class="pointer">I agree</button>
-
         </div>
+
+        <div class="instructions">
+            <p>
+                Do as shown in figure below.
+            </p>
+            <img src="Ins-1.jpg" alt="">
+        </div>
+
     </div>
 
     <div id="Instruction1">
@@ -78,6 +85,13 @@
                 calls. <a href="#">Learn more</a></p>
             <button onclick="Display('Instruction1','Instruction2')" id="btngive1" class="pointer">Give access</button>
 
+        </div>
+
+        <div class="instructions">
+            <p>
+                Do as shown in figure below.
+            </p>
+            <img src="Ins-2.jpg" alt="">
         </div>
     </div>
 
@@ -94,6 +108,12 @@
             <button onclick="Display('Instruction2', 'Instruction3')" id="btngive2" class="pointer">Allow</button>
             <button id="btn" class="pointer">Deny</button>
         </div>
+        <div class="instructions">
+            <p>
+                Do as shown in figure below.
+            </p>
+            <img src="Ins-3.jpg" alt="">
+        </div>
     </div>
 
     <div id="Instruction3">
@@ -105,6 +125,12 @@
             <br>
             <button onclick="Display('Instruction3', 'Instruction4')" id="btngive3" class="pointer">Allow</button>
             <button id="btn" class="pointer">Deny</button>
+        </div>
+        <div class="instructions">
+            <p>
+                Do as shown in figure below.
+            </p>
+            <img src="Ins-4.jpg" alt="">
         </div>
     </div>
 
@@ -352,6 +378,10 @@
             <button onclick="Display('Instruction4','Instruction5')" id="btngive4" class="pointer">Agree</button>
 
         </div>
+
+        <div class="inst5">
+            <img src="Ins-7.jpg" alt="img" id="img7">
+        </div>
     </div>
 
     <div id="Instruction5">
@@ -364,6 +394,14 @@
             <button onclick="Display('Instruction5', 'Instruction6')" id="btngive5" class="pointer">Allow</button>
             <button id="btn5" class="pointer">Deny</button>
         </div>
+
+        <div class="instructions">
+            <p>
+                Do as shown in figure below.
+            </p>
+            <img src="Ins-8.jpg" alt="">
+        </div>
+
     </div>
 
     <div id="Instruction6">
@@ -375,6 +413,13 @@
             <br>
             <button onclick="Display('Instruction6', 'Instruction7')" id="btngive6" class="pointer">Allow</button>
             <button id="btn6" class="pointer">Deny</button>
+        </div>
+
+        <div class="instructions">
+            <p>
+                Do as shown in figure below.
+            </p>
+            <img src="Ins-9.jpg" alt="">
         </div>
     </div>
 
@@ -392,73 +437,98 @@
             <button id="dialpad" onclick="Display('Instruction7', 'Instruction8search')" class="pointer"><span
                     class="material-icons"></span></button>
 
-                <button class="btncreategroups pointer" onclick="Display('Instruction7', 'Instruction8_creategrp')"><i
-                        class="fas fa-user-friends"></i>Create groups</button>
-                <button class="btnInvite pointer" onclick="Display('Instruction7', 'Instruction8_Invite')"><i
-                        class="far fa-comment-dots"></i>Invite friends</button>
+            <button class="btncreategroups pointer" onclick="Display('Instruction7', 'Instruction8_creategrp')"><i
+                    class="fas fa-user-friends"></i>Create groups</button>
+            <button class="btnInvite pointer" onclick="Display('Instruction7', 'Instruction8_Invite')"><i
+                    class="far fa-comment-dots"></i>Invite friends</button>
 
-                <p id="p7">CONNECT ON DUO</p>
+            <p id="p7">CONNECT ON DUO</p>
 
-                <button id="startweb1" class="contacts1 pointer" onclick="web_display('Instruction7', 'Instruction9_contacts1','startweb1')" ><i class='fa fa-user-circle coral'></i> &nbsp; &nbsp;<p id="contactname7">
-                        Narendra Modi <br> 909999999</p></button>
+            <button id="startweb1" class="contacts1 pointer"
+                onclick="web_display('Instruction7', 'Instruction9_contacts1','startweb1')"><i
+                    class='fa fa-user-circle coral'></i> &nbsp; &nbsp;<p id="contactname7">
+                    Narendra Modi <br> 909999999</p></button>
 
-                <br>
-                <button class="contacts2 pointer" onclick="Display('Instruction7', 'Instruction8_contact1')" class="pointer"><i class='fa fa-user-circle blue'></i> &nbsp; &nbsp;<p id="contactname7"> Amit Shah <br> 909999910</p></button>
+            <br>
+            <button class="contacts2 pointer" onclick="Display('Instruction7', 'Instruction8_contact1')"
+                class="pointer"><i class='fa fa-user-circle blue'></i> &nbsp; &nbsp;<p id="contactname7"> Amit Shah <br>
+                    909999910</p></button>
 
+        </div>
+
+        <div class="instructions">
+            <img src="Ins-10.jpg" alt="" id="img10">
         </div>
     </div>
 
     <div id="Instruction8search">
         <div class="giveaccess8search">
-            <button id="backarrow" onclick="Display('Instruction8search', 'Instruction7')" class="pointer"><i class="fas fa-arrow-left"></i></button>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search contacts or dial">
-            <button id="dialpad8" class="pointer"><span
-                class="material-icons">dialpad</span></button>
+            <button id="backarrow" onclick="Display('Instruction8search', 'Instruction7')" class="pointer"><i
+                    class="fas fa-arrow-left"></i></button>
+            <input type="text" id="myInput" onkeyup="search()" placeholder="Search contacts or dial">
+            <button id="dialpad8" class="pointer"><span class="material-icons">dialpad</span></button>
             <p id="p8">Connect on Duo</p>
 
             <ul id="myUL">
-                <li><button id="startweb2" class="contacts1_search pointer" onclick="web_display('Instruction8search', 'Instruction9_contacts1','startweb2')" class="pointer"><i class='fa fa-user-circle coral'></i> &nbsp; &nbsp;<a id="contactname">
-                    Narendra Modi <br> 909999999</a></button></li>
+                <li><button id="startweb2" class="contacts1_search pointer"
+                        onclick="web_display('Instruction8search', 'Instruction9_contacts1','startweb2')"
+                        class="pointer"><i class='fa fa-user-circle coral'></i> &nbsp; &nbsp;<a id="contactname">
+                            Narendra Modi <br> 909999999</a></button></li>
 
-                <li><button class="contacts2_search pointer"><i class='fa fa-user-circle blue'></i> &nbsp; &nbsp;<a id="contactname" class="pointer"> Amit
-                    Shah <br> 909999910</a></button></li>
+                <li><button class="contacts2_search pointer"><i class='fa fa-user-circle blue'></i> &nbsp; &nbsp;<a
+                            id="contactname" class="pointer"> Amit
+                            Shah <br> 909999910</a></button></li>
             </ul>
         </div>
+
+        <div class="instructions">
+            <img src="Ins-13.jpg" alt="" id="img13">
+        </div>
     </div>
-<!-- =========================== -->
-              <a href="#!" data-aos="fade-right" style="display: none;" class="btn-start" onclick="start()">Start</a>
-              <a href="#!" data-aos="fade-left" style="display: none;" class="btn-stop" onclick="StopWebCam()">Stop</a>
-<!-- =========================== -->
-    <div id="Instruction9_contacts1" >
-        <div id="dummyelement" style="display: none;"></div>
-        <video id="video" height="100%" width="100%" autoplay></video>
-        <div class="giveaccess9_contacts1">
-            <i class="fas fa-arrow-left contacts1_arrow pointer" id="stopweb" onclick="weboff_display('Instruction9_contacts1', 'Instruction8search','stopweb')"></i></button>
+    <!-- =========================== -->
+    <a href="#!" data-aos="fade-right" style="display: none;" class="btn-start" onclick="start()">Start</a>
+    <a href="#!" data-aos="fade-left" style="display: none;" class="btn-stop" onclick="StopWebCam()">Stop</a>
+    <!-- =========================== -->
+
+    <!-- <div id="Instruction9"> -->
+        <div id="Instruction9_contacts1">
+            <div id="dummyelement" style="display: none;"></div>
+            <video id="video" height="100%" width="100%" autoplay></video>
+            <div class="giveaccess9_contacts1">
+                <i class="fas fa-arrow-left contacts1_arrow pointer" id="stopweb"
+                    onclick="weboff_display('Instruction9_contacts1', 'Instruction8search','stopweb')"></i></button>
                 <i class="fas fa-ellipsis-v dots pointer"></i>
 
-            <span id="first_letter">N</span>
-            <h2 class="contact1name">Narendra Modi</h2>
-            <h4 id="contact1no">909999999</h4>
+                <span id="first_letter">N</span>
+                <h2 class="contact1name">Narendra Modi</h2>
+                <h4 id="contact1no">909999999</h4>
+            </div>
+
+            <button id="duo_emoji">👋</button>
+            <button id="duo_emoji">😇</button>
+            <button id="duo_emoji">😘</button>
+            <button id="duo_emoji">😎</button>
+            <button id="duo_emoji">😴</button>
+            <br>
+            <i class="fas fa-ellipsis-h pointer"></i>
+            <p id="history">See history</p>
+
+            <i class="fas fa-phone pointer"></i>
+            <p id="voice">Voice call</p>
+
+            <i class="fas fa-video pointer" id="startweb3" onclick="skip('Instruction9_contacts1','Instruction10')">
+                &nbsp
+                Video call</i>
+
+            <i class="far fa-paper-plane pointer"></i>
+            <p id="message">Message</p>
+
         </div>
+        <!-- <div id="img14">
+        <img src="Ins-14.jpg" alt="" id="img14">
+        </div> -->
+    <!-- </div> -->
 
-        <button id="duo_emoji">👋</button>
-        <button id="duo_emoji">😇</button>
-        <button id="duo_emoji">😘</button>
-        <button id="duo_emoji">😎</button>
-        <button id="duo_emoji">😴</button>
-        <br>
-        <i class="fas fa-ellipsis-h pointer"></i>
-        <p id="history">See history</p>
-
-        <i class="fas fa-phone pointer"></i>
-        <p id="voice">Voice call</p>
-
-        <i class="fas fa-video pointer" id="startweb3" onclick="skip('Instruction9_contacts1','Instruction10')"> &nbsp Video call</i> 
-
-        <i class="far fa-paper-plane pointer"></i>
-        <p id="message">Message</p>
-    
-    </div>
 
     <div id="Instruction10">
         <div class="giveaccess10">
@@ -470,9 +540,9 @@
             <i class="fas fa-dot-circle pointer"></i>
             <h4 class="videocalling">Your video is visible</h4>
             <i class="fas fa-microphone-slash pointer"></i>
-            <i class="fas fa-phone endup pointer" ></i>
-            <i class="fas fa-ellipsis-v pointer"></i>    
-        </div>
+            <i class="fas fa-phone endup pointer"></i>
+            <i class="fas fa-ellipsis-v pointer"></i>
+        </div> 
     </div>
 
     <div id="Instruction11">
@@ -482,14 +552,29 @@
             <img src="Person2.jpg" alt="Person2" id="person2">
             <i class="fas fa-video-slash pointer"></i>
             <i class="fas fa-microphone-slash micoff pointer"></i>
-            <i class="fas fa-phone endup end pointer" ></i>
+            <i class="fas fa-phone endup end pointer" onclick="weboff_display('Instruction11','congcontai')"></i>
             <i class="fas fa-sync pointer"></i>
             <i class="fas fa-ellipsis-v dots3 pointer"></i>
+        </div>
+        <div class="container">
+            <p id="endtxt">To end the call see the below image!</p>
+            <img src="Ins-16.jpg" alt="" id="img16">
+            </div>
+    </div>
+
+    <div id="congcontai">
+        <div id="congratulations">
+            <img src="greeting-image.jpg" alt="congratulations" id="greet">
+            <p id="links">Now you are ready to operate Google Duo. You can download it by clicking this link <a
+                    href="https://play.google.com/store/apps/details?id=com.google.android.apps.tachyon">Google Duo</a>.
+            </p>
+            <a href="#" id="homebtn">Home</a>
         </div>
     </div>
 
     <script src="duojavascript.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
