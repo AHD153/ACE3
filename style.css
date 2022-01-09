@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.body-container {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0px 5%;
+    max-width: 1000px;
+}
+.topic-container {
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 5px 5px 10px rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 250px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.img-container {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+.topic-descp {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    gap: 10px;
+    padding: 10px 5%;
+    text-align: center;
+    justify-items: center;
+}
+.topic-container:visited {
+    color: unset;
+}
